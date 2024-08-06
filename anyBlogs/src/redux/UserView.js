@@ -9,7 +9,7 @@ export const UserProfileView = createAsyncThunk(
   'user/profile/view',
   async (id) => {
 
-    const response = await axios.post(`https://any-blogs.vercel.app/api/user/profile/view/${id}`)
+    const response = await axios.post(`https://any-blogs-server.vercel.app/api/user/profile/view/${id}`)
       .then((response) => {
 
         return response.data
