@@ -1,0 +1,1311 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(38, 38, 80);
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+nav{
+    width: 100%;
+    background-color: rgb(3, 3, 83);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px 1px rgb(27, 27, 54);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+nav .logo a{
+    /* color: white; */
+    color: rgb(223, 223, 248);
+    text-decoration: none;
+}
+nav .logo a h2{
+    margin: auto 5px;
+}
+
+nav #check{
+    display: none;
+}
+nav .hamburger{
+    display: none;
+}
+
+nav .navbar{
+    display: flex;
+}
+nav  ul{
+    width: auto;
+    display: flex;
+}
+nav  ul li{
+    list-style: none;
+    margin: auto 10px;
+    
+}
+nav ul li a{
+    color: rgb(165, 165, 248);
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+nav ul li a:hover{
+    color: rgb(91, 2, 163);
+}
+nav li a img{
+    width: 100%;
+    max-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: block;
+    transition: 0.2s ease-in-out;
+}
+nav li a img:hover{
+    opacity: 0.9;
+}
+
+/* Search */
+
+.search{
+    width: 90%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin: auto;
+    position: relative;
+    
+}
+.search form{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+    margin: 5px auto 0px auto;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600; 
+}
+.search form input{
+    width: 100%;
+    padding: 5px;
+    /* margin: 5px auto; */
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;   
+}
+.search form button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 6px;
+    transition: 0.2s ease-in-out;
+}
+.search form button .svg-c{
+    width: 100%;
+}
+.search form button:hover{
+    cursor: pointer;
+    padding: 2px;
+    fill: #303081;
+    background-color: rgb(163, 199, 240);
+    border-radius: 10px;
+}
+.new{
+    color: white;
+}
+.search-suggestion{
+    width: 88%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: white;
+    color: #303081;
+    border-radius: 10px;
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    left: 0;
+    /* padding: 5px; */
+    
+}
+.search-suggestion ul{
+    /* width: 100%; */
+    padding: 5px;
+    width: 100%;
+}
+.search-suggestion ul li{
+    /* width: 100%; */
+    padding: 0px 5px;
+    list-style: none;
+}
+.search-suggestion ul:hover{
+    cursor: pointer;
+    color: #7f7fe9;
+    background-color: #e4e4f7;
+    border-radius: 10px;
+}
+/* Categories */
+
+.categories{
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    /* flex-wrap: wrap; */
+}
+.categories ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.categories ul li{
+    list-style: none;
+    margin: 10px;
+}
+.categories ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 400;
+    transition: 0.2s ease-in-out;
+}
+.categories ul li a:hover{
+    color: rgb(83, 84, 172);
+}
+
+/* Blogs */
+
+.container{
+    width: 100%;
+}
+.container .blogs{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    gap: 20px;
+}
+.container .blogs .box{
+    /* max-width: 300px; */
+    width: 40%;
+    /* max-width: 400px; */
+    position: relative;
+}
+.container .blogs .box .blog-image{
+    width: 100%;
+}
+.container .blogs .box .blog-image img{
+    width: 100%;
+    border-radius: 5px;
+    display: block;
+}
+.container .blogs .box .blog-content{
+    width: 100%;
+    /* background-color: red; */
+}
+.container .blogs .box .blog-content .blog-description{
+    width: 100%;
+    /* background-color:aqua; */
+}
+.container .blogs .box .blog-content .blog-description p{
+    width: 100%;
+    /* background-color:blue; */
+}
+.container .blogs .box .edit-delete{
+    position: absolute;
+    display: flex;
+    /* justify-content:; */
+    /* align-items: flex-end; */
+    gap: 5px;
+    right: 0;
+}
+.container .blogs .box .edit-delete a .svg{
+    fill: rgb(53, 53, 112);
+    z-index: 1;
+    transition: 0.2s ease-in-out;
+}
+.container .blogs .box .edit-delete a .svg:hover{
+    fill: black;
+    transform: translate(1px, 1px);
+}
+.container .blogs .box .blog-profile{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* justify-content: center; */
+    align-items: center;
+}
+.container .blogs .box .blog-profile .p-info{
+    width: 52%;
+    /* background-color: aqua;  */
+}
+.container .blogs .box .blog-profile .p-info a{
+    width: 100%;
+    display: flex;
+    align-items: center;    
+    gap: 5px;
+    text-decoration: none;
+    color: white;
+    transition: 0.2s ease-in-out;
+}
+.container .blogs .box .blog-profile .p-info a:hover{
+    color: rgb(160, 161, 236);
+}
+.container .blogs .box .blog-profile .p-info img{
+    width: 24%;
+    max-width: 35px;
+    height: 35px;
+    display: block;
+    border-radius: 50%;
+}
+.container .blogs .box .blog-profile .p-comments a{
+    text-decoration: none;   
+    color: white;
+    transition: 0.2s ease-in-out;
+} 
+.container .blogs .box .blog-profile .p-comments a:hover{
+    color: rgb(83, 84, 172);
+}
+.container .blog_not{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.readmore{
+    width: 100%;
+    margin: 20px auto;
+}
+.readmore .blogs{
+    width: 100%;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    /* gap: 20px; */
+}
+.readmore .blogs .box{
+    width: 50%;
+    /* max-width: 400px; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.readmore .blogs .box .blog-image{
+    width: 100%;
+}
+.readmore .blogs .box .blog-image img{
+    width: 100%;
+    border-radius: 5px;
+    display: block;
+    margin: 10px auto;
+}
+.readmore .blogs .box .blog-content{
+    width: 100%;
+    
+    /* background-color: red; */
+}
+.readmore .blogs .box .blog-content .blog-description{
+    width: 100%;
+    /* background-color:aqua; */
+}
+.readmore .blogs .box .blog-content .blog-description p{
+    width: 100%;
+    margin: 10px auto;
+    /* background-color:blue; */
+}
+.readmore .blogs .box .edit-delete{
+    position: absolute;
+    display: flex;
+    /* justify-content:; */
+    /* align-items: flex-end; */
+    gap: 5px;
+    right: 0;
+}
+.readmore .blogs .box .edit-delete a .svg{
+    fill: rgb(53, 53, 112);
+    z-index: 1;
+    transition: 0.2s ease-in-out;
+}
+.readmore .blogs .box .edit-delete a .svg:hover{
+    fill: black;
+    transform: translate(1px, 1px);
+}
+.readmore .blogs .box .blog-profile{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* justify-content: center; */
+    align-items: center;
+}
+.readmore .blogs .box .blog-profile .p-info{
+    width: 52%;
+    /* background-color: aqua;  */
+}
+.readmore .blogs .box .blog-profile .p-info a{
+    width: 100%;
+    display: flex;
+    align-items: center;    
+    gap: 5px;
+    text-decoration: none;
+    color: white;
+    transition: 0.2s ease-in-out;
+}
+.readmore .blogs .box .blog-profile .p-info a:hover{
+    color: rgb(160, 161, 236);
+}
+.readmore .blogs .box .blog-profile .p-info img{
+    width: 24%;
+    max-width: 35px;
+    height: 35px;
+    display: block;
+    border-radius: 50%;
+}
+.readmore .blogs .box .blog-profile .p-comments a{
+    text-decoration: none;   
+    color: white;
+    transition: 0.2s ease-in-out;
+} 
+.readmore .blogs .box .blog-profile .p-comments a:hover{
+    color: rgb(83, 84, 172);
+}
+.readmore .blog_not{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+/* contact */
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+    font-family: "Poppins", sans-serif;
+}
+.contact form{
+    width: 100%;
+    margin:50px auto;text-align: center;
+}
+.contact form .form-group{
+    width: 100%;
+}
+.contact form .form-group input,textarea{
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    padding: 3px;
+    outline: none;
+    border: none;
+    margin: 10px auto;
+    border-radius: 5px;
+    font-weight: 600;
+}
+.contact form .form-group button{
+    cursor: pointer;
+    width: 25%;
+    padding: 3px;
+    /* background-color: rgb(52, 52, 95); */
+    background-color: white;
+    color: black;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 0 0 4px 1px gray;
+    font-family: "Poppins", sans-serif; 
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}   
+.contact form .form-group button:hover{
+    background-color: rgb(52, 52, 95);
+    color: white;
+    
+}
+
+/* login */
+
+.login{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:100px auto;
+    text-align: center;
+}
+.login form{
+    width: 100%;
+    
+}
+.login form .form-group{
+    width: 100%;
+}
+.login form .form-group input{
+    width: 100%;
+    padding: 3px;
+    margin: 10px auto;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+.login form .form-group button{
+    cursor: pointer;
+    margin: 10px auto;
+    width: 30%;
+    padding: 3px;   
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif; 
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}
+.login form .form-group button:hover{
+    /* border: 1px solid rgba(4, 10, 66, 0.822); */
+    background-color: rgb(60, 60, 126);
+    color: white;
+    box-shadow: 0 0 5px 1px rgb(142, 142, 235);
+}
+.login form .form-group a{
+    /* text-decoration: none; */
+    color: rgb(93, 100, 189);
+    transition: 0.2s ease-in-out;
+}
+.login form .form-group a:hover{
+    color: rgb(134, 136, 231);
+    /* text-decoration: none; */
+}
+
+/* signup */
+
+.signup{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:50px auto;
+    text-align: center;
+}
+.signup form{
+    width: 100%;
+    
+}
+.signup form .form-group{
+    width: 100%;
+}
+.signup form .form-group input{
+    width: 100%;
+    padding: 3px;
+    margin: 10px auto;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+.signup form .flex{
+    display: flex;
+    width: max-content;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    gap: 5px;
+}
+.signup form .form-group button{
+    cursor: pointer;
+    margin: 10px auto;
+    width: 30%;
+    padding: 3px;   
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif; 
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}
+.signup form .form-group button:hover{
+    /* border: 1px solid rgba(4, 10, 66, 0.822); */
+    background-color: rgb(60, 60, 126);
+    color: white;
+    box-shadow: 0 0 5px 1px rgb(142, 142, 235);
+}
+.signup form .form-group a{
+    color: rgb(93, 100, 189);
+    transition: 0.2s ease-in-out;
+}
+.signup form .form-group a:hover{
+    color: rgb(134, 136, 231);
+}
+
+/* profile */
+
+.user-profile{
+    width: 100%;
+}
+.user-profile .bg-image{
+    width: 100%;
+}
+.user-profile .bg-image img{
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    background-position: center center;
+    display: block;
+}
+.user-profile .profile-image{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -20px;
+    margin:auto;
+    text-align: center;
+    font-weight: 500;
+}
+.user-profile .profile-image img {
+    width: 25% ;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid white;
+    padding: 5px;
+    margin-bottom: 3px;
+}
+.user-profile .profile-image .desc{ 
+    color: #7f7fe9;
+}
+.profile-info{  
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile-info .box{
+    width: 30%;
+    margin: auto;
+    border-radius: 10px;
+}
+.profile-info .box a{
+    text-decoration: none;
+}
+
+.profile-info .box .logout h3{
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
+    font-weight: 500;
+    font-size: 0.9rem;
+    width: 100%;
+    background-color: rgb(48, 48, 95);
+    color: rgb(168, 169, 247);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px auto;
+}
+.profile-info .box .logout h3:hover{
+    cursor: pointer;
+    color: rgb(214, 236, 247);
+    background-color: #33336b;
+    box-shadow: 0 0 7px 1px #33336b;
+}
+.profile-info .box a .blog-info{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px auto;
+    color: rgb(168, 169, 247);
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(48, 48, 95);
+}
+.profile-info .box a .blog-info h3{
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+.profile-info .box a .blog-info  p{
+    font-size: 0.9rem;
+}
+.profile-info .box a .blog-info:hover{
+    color: rgb(214, 236, 247);
+    background-color: #33336b;
+    box-shadow: 0 0 7px 1px #33336b;
+}
+
+/* Password */
+
+.password-change{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:100px auto;
+    text-align: center;
+}
+.password-change form{
+    width: 100%;
+    
+}
+.password-change form .form-group{
+    width: 100%;
+}
+.password-change form .form-group input{
+    width: 100%;
+    padding: 3px;
+    margin: 10px auto;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+.password-change form .form-group button{
+    cursor: pointer;
+    margin: 10px auto;
+    width: 30%;
+    padding: 3px;   
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif; 
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}
+.password-change form .form-group button:hover{
+    /* border: 1px solid rgba(4, 10, 66, 0.822); */
+    background-color: rgb(60, 60, 126);
+    color: white;
+    box-shadow: 0 0 5px 1px rgb(142, 142, 235);
+}
+
+/* Edit Profile */
+
+
+.profile-edit{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.profile-edit form{
+    width: 60%;
+    margin: 20px auto;
+}
+.profile-edit form .form-group{
+    width: 100%;
+}
+.profile-edit form .form-group #bg-img{
+    display: none;
+}
+.profile-edit form .bg-img-p{
+    cursor: pointer;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100% ;
+    border-radius: 10px;
+    margin: 10px auto;
+}
+.profile-edit form .form-group #p-img{
+    display: none;
+}
+.profile-edit form .p-img-p{
+    cursor: pointer;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    background-color: rgb(125, 125, 173);
+    border-radius: 50%;
+    margin: 10px auto;
+}
+.profile-edit form .form-group .bg{
+    width: 100%;
+    cursor: pointer;
+}
+.profile-edit form .form-group .bg img{
+  width: 100%;
+  height: 250px;
+  display: block;
+  border-radius: 10px;
+}
+.profile-edit form .form-group .pro{
+    width: 100%;
+    
+    cursor: pointer;
+}
+.profile-edit form .form-group .pro img{
+    width: 100%;
+    display: block;
+    height: 90px;
+    border-radius: 50%;
+  }
+.profile-edit form  .flex{
+    display: flex;
+    width: max-content;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    gap: 5px;
+}
+.profile-edit form .form-group input,textarea{
+    width: 100%;
+    padding: 3px;
+    margin: 10px auto;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;   
+}
+.profile-edit form .form-group button{
+    cursor: pointer;
+    margin: 10px auto;
+    width: 30%;
+    padding: 3px;   
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif; 
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}
+.profile-edit form .form-group button:hover{
+    background-color: rgb(60, 60, 126);
+    color: white;
+    box-shadow: 0 0 5px 1px rgb(142, 142, 235);
+}
+
+/* User Blogs */
+
+.user-blogs{
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px auto;
+    flex-direction: column;
+    gap: 20px;
+}
+.user-blogs .add-blog{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user-blogs .add-blog a{
+    width: 100%;
+    
+}
+.user-blogs .add-blog a button{
+    cursor: pointer;
+    font-family: "Poppins", sans-serif; 
+    color: white;
+    width: 100%;
+    padding: 2px;
+    font-weight: 500;
+    background-color: rgb(54, 54, 114);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    transition: 0.2s ease-in-out;
+}
+.user-blogs .add-blog a button:hover{
+    box-shadow: 0 0 5px 1px #303081;
+}
+
+/* Add Blog */
+
+.addblog{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.addblog form{
+    width: 60%;
+    margin: 20px auto;
+}
+.addblog form .form-group{
+    width: 100%;
+}
+.addblog form .form-group #blogimg{
+    display: none;
+}
+.addblog form .img-upload{
+    cursor: pointer;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100% ;
+    background-color: rgb(125, 125, 173);
+    border-radius: 10px;
+    margin: 10px auto;
+}
+.addblog form .form-group label{
+    width: 100%;
+    height: 250px;
+    cursor: pointer;
+}
+.addblog form .form-group label img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: block;
+}
+.addblog form .form-group input,textarea,select{
+    width: 100%;
+    padding: 3px;
+    margin: 5px auto;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;   
+}
+.addblog form .form-group button{
+    cursor: pointer;
+    margin: 10px auto;
+    width: 30%;
+    padding: 3px;   
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif; 
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}
+.addblog form .form-group button:hover{
+    background-color: rgb(60, 60, 126);
+    color: white;
+    box-shadow: 0 0 5px 1px rgb(142, 142, 235);
+}
+
+/* Edit Blog */
+
+.editblog{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.editblog form{
+    width: 60%;
+    margin: 20px auto;
+}
+.editblog form .form-group{
+    width: 100%;
+}
+.editblog form .form-group #blogimg{
+    display: none;
+}
+.editblog form .img-upload{
+    cursor: pointer;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100% ;
+    background-color: rgb(125, 125, 173);
+    border-radius: 10px;
+    margin: 10px auto;
+}
+.editblog form .form-group label{
+    cursor: pointer;
+    width: 100%;
+    height: 250px;
+}
+.editblog form .form-group label img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: block;
+}
+.editblog form .form-group input,textarea{
+    width: 100%;
+    padding: 3px;
+    margin: 5px auto;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;   
+}
+.editblog form .form-group button{
+    cursor: pointer;
+    margin: 10px auto;
+    width: 30%;
+    padding: 3px;   
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif; 
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}
+.editblog form .form-group button:hover{
+    background-color: rgb(60, 60, 126);
+    color: white;
+    box-shadow: 0 0 5px 1px rgb(142, 142, 235);
+}
+
+/* comment */
+.comments{
+    width: 100%;
+}
+.comments .box{
+    width:90%;
+    background-color: rgb(55, 55, 107);  
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px auto;
+    position: relative;
+}
+.comments .box .user-profile-c{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin:5px auto;
+}
+.comments .box .user-profile-c img{
+    width: 6%;
+    height: 40px;
+    border-radius: 50%;
+}
+.comments .box .user-profile-c .datetime{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgb(109, 109, 201);
+}
+.comments .box .user-comment h3{
+    margin: 3px auto;
+}
+
+.comments .box .edit-delete{
+    position: absolute;
+    display: flex;
+    /* justify-content:; */
+    /* align-items: flex-end; */
+    gap: 5px;
+    top: 0;
+    right: 0;
+}
+.comments .box .edit-delete a .svg{
+    fill: rgba(94, 94, 131, 0.63);
+    z-index: 1;
+    transition: 0.2s ease-in-out;
+}
+.comments .box .edit-delete a .svg:hover{
+    fill:rgb(107, 159, 207);
+    transform: translate(1px, 1px);
+}
+
+.comment-box{
+    width: 90%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin: auto;
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
+}
+.comment-box form{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+    margin: 5px auto;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600; 
+}
+.comment-box form input{
+    width: 100%;
+    padding: 5px;
+    margin: 5px auto;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;   
+}
+.comment-box form button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 6px;
+    transition: 0.2s ease-in-out;
+}
+.comment-box form button .svg-c{
+    width: 100%;
+}
+.comment-box form button:hover{
+    cursor: pointer;
+    padding: 2px;
+    background-color: rgb(204, 203, 203);
+    border-radius: 10px;
+}
+
+.commenet-edit{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:100px auto;
+    text-align: center;
+}
+.commenet-edit form{
+    width: 100%;
+    
+}
+.commenet-edit form .form-group{
+    width: 100%;
+}
+.commenet-edit form .form-group input{
+    width: 100%;
+    padding: 3px;
+    margin: 10px auto;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+.commenet-edit form .form-group button{
+    cursor: pointer;
+    margin: 10px auto;
+    width: 30%;
+    padding: 3px;   
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif; 
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}
+.commenet-edit form .form-group button:hover{
+    /* border: 1px solid rgba(4, 10, 66, 0.822); */
+    background-color: rgb(60, 60, 126);
+    color: white;
+    box-shadow: 0 0 5px 1px rgb(142, 142, 235);
+}
+
+/* about */
+
+.about{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    /* padding: 10px; */
+}
+/* .about .note p{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+} */
+
+.about .note{
+    width: 80%;
+    /* margin: 10px auto; */
+    /* padding: 10px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    word-spacing: 5px;
+}
+
+ .about .note img{
+    width: 6%;
+    border-radius: 10px;
+ }
+.about .menus-info{
+    width: 90%;
+    /* display: flex; */
+    word-spacing: 2px;
+}
+.about .menus-info p{
+    display: flex;
+    gap: 10px;
+}
+.about .menus-info p  img{
+    width: 5%;
+    border-radius: 10px;
+    /* display: block; */
+
+}
+.about .menus-info .menu-info{
+    display: flex;
+}
+/* .abour .menu-info  */
+
+.about .menus-info p{
+    margin: 10px auto;
+}
+.about .menus-info ul{
+    width: 50%;
+    margin: auto;
+}
+.about .menus-info ul li{
+    /* display: flex; */
+    list-style: none;
+    margin: 5px auto;
+}
+.about .menus-info ul li img{
+    width: 7%;
+    border-radius: 10px;
+    /* display: block; */
+    
+}
+/* footer */
+
+footer{
+    width: 100%;
+    background-color: #272761;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px 0px 0px 0px;
+    /* align-items: center; */
+}
+footer .footer{
+    display: flex;
+    justify-content: space-between;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 5px;
+}
+footer .footer .logo{
+    padding: 0;
+}
+footer .footer .real-profile{
+    display: flex;
+    justify-content: right;
+    gap: 5px;
+    width: 7%;
+}
+footer .real-profile a img{
+    width: 100%;
+    display: block;
+    border-radius: 13px;
+}
+footer .real-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading{
+  width: 100%;
+  height: 73vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading .r-loading{
+    width: 17px;
+    height: 17px;
+    /* animation: loading; */
+    animation: loading 1.5s ease-in-out infinite;
+    /* border-top-color: blue; */
+    border: 5px solid transparent;
+    /* border: 10px; */
+    /* border-top-color:red; */
+    border-radius: 100px;
+    /* background-color: red; */
+}
+@keyframes loading {
+    0%{
+        border-top-color:rgb(41, 87, 212);
+         transform: rotate(0turn);
+    }
+    50%{
+        border-top-color:rgb(92, 122, 206);
+        border-right-color: rgb(92, 122, 206);
+        transform: rotate(1turn);
+        /* border-right-color: blue; */
+    }
+    100%{
+        border-top-color:rgb(92, 122, 206);
+        border-right-color: rgb(92, 122, 206);
+        border-bottom-color: rgb(92, 122, 206);
+        border-left-color: rgb(92, 122, 206);
+        /* border-spacing: 10px; */
+        border-width: 5px;
+        
+        transform: rotate(1turn);
+    }
+    
+
+}
