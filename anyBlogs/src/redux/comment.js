@@ -9,7 +9,7 @@ export const BlogCommentGets = createAsyncThunk(
     'blog/comment/get',
     async (bid) => {
         const { id } = bid;
-        const response = await axios.get(`https://any-blogs.vercel.app/api/blog/comments/${id}`).then((response) => {
+        const response = await axios.get(`https://any-blogs-server.vercel.app/api/blog/comments/${id}`).then((response) => {
 
 
             return response.data
@@ -28,7 +28,7 @@ export const UserBlogCommentSend = createAsyncThunk(
     async (comments) => {
         const { id, comment } = comments;
 
-        const response = await axios.post(`https://any-blogs.vercel.app/api/blog/user/comments/${id}`, {
+        const response = await axios.post(`https://any-blogs-server.vercel.app/api/blog/user/comments/${id}`, {
             comment
         }, {
             headers: {
@@ -54,7 +54,7 @@ export const UserBlogsCommentedGets = createAsyncThunk(
     async () => {
 
 
-        const response = await axios.post(`https://any-blogs.vercel.app/api/blog/user/comments/get`, {}, {
+        const response = await axios.post(`https://any-blogs-server.vercel.app/api/blog/user/comments/get`, {}, {
             headers: {
                 "auth-token": localStorage.getItem("auth-token")
             }
@@ -79,7 +79,7 @@ export const UserBlogCommentEditGet = createAsyncThunk(
     async (id) => {
 
 
-        const response = await axios.post(`https://any-blogs.vercel.app/api/blog/user/comments/edit/get/${id}`, {}, {
+        const response = await axios.post(`https://any-blogs-server.vercel.app/api/blog/user/comments/edit/get/${id}`, {}, {
             headers: {
                 "auth-token": localStorage.getItem("auth-token")
             }
@@ -102,7 +102,7 @@ export const UserBlogCommentEdit = createAsyncThunk(
     async (comments) => {
         const { comment, _id } = comments;
 
-        const response = await axios.patch(`https://any-blogs.vercel.app/api/blog/user/comments/edit/${_id}`, { comment }, {
+        const response = await axios.patch(`https://any-blogs-server.vercel.app/api/blog/user/comments/edit/${_id}`, { comment }, {
             headers: {
                 "auth-token": localStorage.getItem("auth-token")
             }
@@ -124,7 +124,7 @@ export const UserBlogCommentDelete = createAsyncThunk(
     'user/blog/comment/delete',
     async (id) => {
         const _id = id;
-        const response = await axios.delete(`https://any-blogs.vercel.app/api/blog/user/comments/delete/${_id}`, {
+        const response = await axios.delete(`https://any-blogs-server.vercel.app/api/blog/user/comments/delete/${_id}`, {
             headers: {
                 "auth-token": localStorage.getItem("auth-token")
             }
