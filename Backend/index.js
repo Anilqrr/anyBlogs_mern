@@ -7,11 +7,7 @@ Dotenv.config();
 const server = express();
 const port = process.env.PORT || 3000;
 
-server.use(cors({
-  origin:['https://any-blogs-server.vercel.app'],
-  methods:['GET','POST','PUT','PATCH', 'DELETE'],
-  credentials:true
-}));
+server.use(cors());
 server.use(express.json({ limit: '100mb' }));
 server.get('/', (req, res) => {
   res.send("Hello")
