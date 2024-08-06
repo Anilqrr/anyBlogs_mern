@@ -21,8 +21,8 @@ server.use('/', router)
 main().catch(err => console.log(err));
 
 async function main() {
-  await mongoose.connect('mongodb://127.0.0.1/anyBlogs')
-  // await mongoose.connect(`mongodb+srv://${process.env._USERNAME}:${process.env._PASSWORD}@anyblogs.csulilu.mongodb.net/anyBlogs`)
+  // await mongoose.connect('mongodb://127.0.0.1/anyBlogs')
+  await mongoose.connect(`mongodb+srv://${process.env._USERNAME}:${process.env._PASSWORD}@anyblogs.csulilu.mongodb.net/anyBlogs`)
 
   console.log('Connection established')
 }
