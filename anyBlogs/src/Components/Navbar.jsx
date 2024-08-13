@@ -23,7 +23,7 @@ export default function Navbar() {
           <li><Link to='/about'>About</Link></li>
           {localStorage.getItem('auth-token') ? <li><Link to='/user/userblogs'>Blogs</Link></li> : ""}
           <li><Link to='/contact'>Contact</Link></li>
-          <li>{localStorage.getItem('auth-token') ? <Link to='/profile'>{User.pending === false ? isOpen === true ? "Profile" : <img src={User.user.success === true && User.user.user.profile_img || Profile_img} alt="anyBlogs" /> : ""}</Link> :
+          <li>{localStorage.getItem('auth-token') ? <Link to='/profile'>{User.pending === false ? isOpen === true ? "Profile" : <img src={User.user.success === true && User.user.user.profile_img || Profile_img} alt="anyBlogs" /> : "Wait..."}</Link> :
             <Link to='/login'><li>Login</li></Link>}</li>
         </ul>
         <input type="checkbox" id='check' />
