@@ -5,6 +5,7 @@ import Profile_img from '../assets/user-logo.png'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import { UserProfile } from '../redux/reducer'
+import Loading from './Loading'
 export default function Profile() {
     const [user, setUser] = useState([])
     const navigate = useNavigate()
