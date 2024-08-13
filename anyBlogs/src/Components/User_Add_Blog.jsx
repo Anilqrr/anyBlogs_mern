@@ -40,7 +40,7 @@ export default function User_Add_Blog() {
         // )
     }
     const handleError = () => {
-        if (blogadd.success === true) {
+        if (blogadd && blogadd.success === true) {
             notifysuccess()
             setBlog(
                 {
@@ -51,7 +51,7 @@ export default function User_Add_Blog() {
                 }
             )
         }
-        if (blogadd.success === false) {
+        if (blogadd && blogadd.success === false) {
             notifywarn()
         }
     }
