@@ -49,7 +49,7 @@ export default function User_Edit_Blog() {
                             const base64 = await convertToBase64(file)
                             await setEdit({ ...edit, blog_img: base64 })
 
-                        }} accept='.png .jpg' />
+                        }} accept='.png, .jpg, .jpeg' />
                     </div>
                     <div className="form-group">
                         <input type="text" name="title" minLength={3} maxLength={20} value={edit.title || ""} onChange={handleChange} id="" placeholder='Title' />
