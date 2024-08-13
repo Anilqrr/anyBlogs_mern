@@ -30,31 +30,8 @@ export default function User_Add_Blog() {
         e.preventDefault()
         dispatch(UserBlogAdd(Blog))
 
-        // setBlog(
-        //     {
-        //         title: '',
-        //         categorys: '',
-        //         description: '',
-        //         blog_img: ''
-        //     }
-        // )
     }
-    const handleError = () => {
-        if (blogadd && blogadd.success === true) {
-            notifysuccess()
-            setBlog(
-                {
-                    title: '',
-                    categorys: '',
-                    description: '',
-                    blog_img: ''
-                }
-            )
-        }
-        if (blogadd && blogadd.success === false) {
-            notifywarn()
-        }
-    }
+    
     return (
         <>
 
@@ -88,7 +65,18 @@ export default function User_Add_Blog() {
                         <textarea name="description" id="description" cols="30" rows="10" minLength={10} value={Blog.description} placeholder='Description' onChange={handelChange}></textarea>
                     </div>
                     <div className="form-group">
-                        <button type='submit' onClick={handleError}>Add Blog</button>
+                        <button type='submit' onClick={()=>{
+                           blogadd && blogadd.success === true && notifysuccess()
+                          blogadd && blogadd.success === true && setBlog(
+                {
+                    title: '',
+                    categorys: '',
+                    description: '',
+                    blog_img: ''
+                }
+            )
+                          blogadd && blogadd.success === false && notifywarn()
+                        }>Add Blog</button>
                     </div>
                 </form>
             </div>}
