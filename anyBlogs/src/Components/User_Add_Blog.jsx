@@ -76,7 +76,7 @@ export default function User_Add_Blog() {
                 }
             )
                           blogadd && blogadd.success === false && notifywarn()
-                        }>Add Blog</button>
+                        }}>Add Blog</button>
                     </div>
                 </form>
             </div>}
