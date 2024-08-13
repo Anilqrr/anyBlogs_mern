@@ -63,7 +63,7 @@ export default function User_Add_Blog() {
                 <form action="" onSubmit={handleSubmit}>
                     <div className="form-group img-upload">
                         <label htmlFor="blogimg"><img src={Blog.blog_img || B_img} alt="" /></label>
-                        <input type="file" name="blog_img" id="blogimg" accept='.png .jpg' onChange={async (e) => {
+                        <input type="file" name="blog_img" id="blogimg" accept='.png, .jpg, .jpeg' onChange={async (e) => {
                             const file = await e.target.files[0]
                             const base64 = await convertToBase64(file)
                             await setBlog({ ...Blog, blog_img: base64 })
