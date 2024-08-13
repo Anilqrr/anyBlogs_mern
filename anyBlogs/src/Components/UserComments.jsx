@@ -3,6 +3,7 @@ import User from '../assets/logo.jfif'
 import { useSelector, useDispatch } from 'react-redux'
 import { UserBlogsCommentedGets } from '../redux/comment'
 import View_Comment from './View_Comment'
+import Loading from './Loading'
 export default function UserComments() {
 
   const { usercomments, pending } = useSelector(state => state.comments)
@@ -25,7 +26,7 @@ export default function UserComments() {
             })
           }
         </> : "Comment Not Found"}
-      </div> : "Loading..."}
+      </div> : <Loading/>}
     </>
   )
 }
