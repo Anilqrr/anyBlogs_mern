@@ -9,7 +9,7 @@ export const AllBlogGet = createAsyncThunk(
      'all/blog',
      async () => {
 
-          const response = await axios.get('http://localhost:5000/api/all/blogs').then((response) => {
+          const response = await axios.get('https://any-blogs-server.vercel.app/api/all/blogs').then((response) => {
 
                return response.data
           }).catch((error) => {
@@ -24,7 +24,7 @@ export const AllBlogGet = createAsyncThunk(
 export const FullBlogGet = createAsyncThunk(
      'blog/getBlogs',
      async (id) => {
-          const response = await axios.post(`http://localhost:5000/api/get/blog/${id}`, {}).then((response) => {
+          const response = await axios.post(`https://any-blogs-server.vercel.app/api/get/blog/${id}`, {}).then((response) => {
 
 
                return response.data
@@ -40,7 +40,7 @@ export const FullBlogGet = createAsyncThunk(
 export const OtherUserBlogGet = createAsyncThunk(
      '/other/user/getBlogs',
      async (id) => {
-          const response = await axios.post(`http://localhost:5000/api/other/user/get/blog/${id}`, {}).then((response) => {
+          const response = await axios.post(`https://any-blogs-server.vercel.app/api/other/user/get/blog/${id}`, {}).then((response) => {
 
 
                return response.data
@@ -56,7 +56,7 @@ export const OtherUserBlogGet = createAsyncThunk(
 export const UserGetBlogs = createAsyncThunk(
      'user/getBlogs',
      async () => {
-          const response = await axios.post('http://localhost:5000/api/user/getblogs', {}, {
+          const response = await axios.post('https://any-blogs-server.vercel.app/api/user/getblogs', {}, {
                headers: {
                     'auth-token': localStorage.getItem('auth-token')
                }
@@ -77,7 +77,7 @@ export const UserBlogAdd = createAsyncThunk(
      'user/add/blog',
      async (blog) => {
           const { title, description, blog_img, categorys } = blog
-          const response = await axios.post('http://localhost:5000/api/user/add/blog', {
+          const response = await axios.post('https://any-blogs-server.vercel.app/api/user/add/blog', {
                title, description, blog_img, categorys
           }, {
                headers: {
@@ -99,7 +99,7 @@ export const UserBlogAdd = createAsyncThunk(
 export const UserBlogDelete = createAsyncThunk(
      'user/blog/delete',
      async (id) => {
-          const response = await axios.delete(`http://localhost:5000/api/user/delete/blog/${id}
+          const response = await axios.delete(`https://any-blogs-server.vercel.app/api/user/delete/blog/${id}
 `, {
                headers: {
                     'auth-token': localStorage.getItem('auth-token')
@@ -121,7 +121,7 @@ export const UserBlogDelete = createAsyncThunk(
 export const UserBlogEditGet = createAsyncThunk(
      'user/blog/get/edit',
      async (id) => {
-          const response = await axios.post(`http://localhost:5000/api/user/edit/blogeditget/${id}
+          const response = await axios.post(`https://any-blogs-server.vercel.app/api/user/edit/blogeditget/${id}
 `, {}, {
                headers: {
                     'auth-token': localStorage.getItem('auth-token')
@@ -143,7 +143,7 @@ export const UserBlogEdit = createAsyncThunk(
      'user/blog/edit',
      async (blog) => {
           const { title, description, categorys, blog_img, _id } = await blog
-          const response = await axios.patch(`http://localhost:5000/api/user/update/blog/${_id}
+          const response = await axios.patch(`https://any-blogs-server.vercel.app/api/user/update/blog/${_id}
 `, { title, categorys, description, blog_img }, {
                headers: {
                     'auth-token': localStorage.getItem('auth-token')
@@ -166,7 +166,7 @@ export const CategoryWiseGetData = createAsyncThunk(
 
      async (name) => {
 
-          const response = await axios.get(`http://localhost:5000/api/category/wise/getdata/${name}
+          const response = await axios.get(`https://any-blogs-server.vercel.app/api/category/wise/getdata/${name}
 `).then((response) => {
 
                return response.data
