@@ -6,6 +6,7 @@ import View_Blog from './View_Blog'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ReadMore from './ReadMore'
+import Loading from './Loading'
 export default function User_Blogs() {
   // const {setEdit} = useContext(Context)
   const { blog, blogadd, pending } = useSelector(state => state.blog)
@@ -55,7 +56,7 @@ export default function User_Blogs() {
 
           </div>}</div>
 
-      </> : <p>Loading....</p>}
+      </> : <Loading/>}
       <ToastContainer />
     </>
   )
