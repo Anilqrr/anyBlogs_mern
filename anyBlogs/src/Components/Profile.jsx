@@ -62,7 +62,7 @@ export default function Profile() {
                             }}>Logout</h3>
                         </div>
                     </div>
-                </div></div> : <p>Loading...</p>}
+                </div></div> : <Loading />}
         </>
     )
 }
