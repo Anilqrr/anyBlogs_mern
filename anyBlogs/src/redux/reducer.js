@@ -11,7 +11,7 @@ export const SignupUser = createAsyncThunk(
   'user/signup',
   async (user) => {
     const { username, email, password, gender, birthdate, country } = await user
-    const response = await axios.post('http://localhost:5000/api/signup', { username, email, password, gender, birthdate, country })
+    const response = await axios.post('https://any-blogs-server.vercel.app/api/signup', { username, email, password, gender, birthdate, country })
       .then((response) => {
         localStorage.setItem('auth-token', response.data.authtoken)
         return response.data
@@ -28,7 +28,7 @@ export const LoginUser = createAsyncThunk(
   'user/login',
   async (user) => {
     const { username, password } = await user
-    const response = await axios.post('http://localhost:5000/api/login', { username, password })
+    const response = await axios.post('https://any-blogs-server.vercel.app/api/login', { username, password })
       .then((response) => {
         localStorage.setItem('auth-token', response.data.authtoken)
         return response.data
@@ -46,7 +46,7 @@ export const UserProfile = createAsyncThunk(
   'user/profile',
   async () => {
 
-    const response = await axios.post('http://localhost:5000/api/getuser', {}, {
+    const response = await axios.post('https://any-blogs-server.vercel.app/api/getuser', {}, {
       headers: {
         'auth-token': localStorage.getItem('auth-token')
       }
@@ -66,7 +66,7 @@ export const UserProfileEdit = createAsyncThunk(
   async (user) => {
     const { username, email, password, gender, birthdate, country, bio, bg_img, profile_img } = await user
 
-    const response = await axios.patch('http://localhost:5000/api/user/profile_edit', {
+    const response = await axios.patch('https://any-blogs-server.vercel.app/api/user/profile_edit', {
       username, email, password, gender, birthdate, country, bio, bg_img, profile_img
     }, {
       headers: {
@@ -92,7 +92,7 @@ export const UserPasswordChange = createAsyncThunk(
   async (passwordchnage) => {
     const { password } = await passwordchnage
 
-    const response = await axios.patch('http://localhost:5000/api/user/password/chnage', {
+    const response = await axios.patch('https://any-blogs-server.vercel.app/api/user/password/chnage', {
       password
     }, {
       headers: {
@@ -119,7 +119,7 @@ export const ContactFeedback = createAsyncThunk(
   async (contatc) => {
     const { feedback } = await contatc
 
-    const response = await axios.post('http://localhost:5000/api/user/feeback', {
+    const response = await axios.post('https://any-blogs-server.vercel.app/api/user/feeback', {
       feedback
     }, {
       headers: {
